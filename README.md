@@ -9,8 +9,6 @@ Hi, I’m Gao Zijie. I'm currently pursuing a Graduate Diploma in Software Analy
 ![](https://nirzak-streak-stats.vercel.app/?user=NkkllS01&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=NkkllS01&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
 ---
 [![](https://visitcount.itsvg.in/api?id=NkkllS01&icon=0&color=0)](https://visitcount.itsvg.in)
