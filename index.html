@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[你的姓名] | Personal Portfolio</title>
-    <meta name="description" content="[你的姓名] 的个人主页与作品集。" />
+    <title>我的个人主页 | vCard 风格</title>
+    <meta
+      name="description"
+      content="个人主页，采用 vCard 风格布局，包含关于我、简历、作品集与联系方式。"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,137 +17,112 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <main class="page" aria-label="个人主页主体">
+    <main class="page">
       <aside class="sidebar card">
         <div class="avatar" aria-hidden="true">YK</div>
-        <h1>[你的姓名]</h1>
-        <p class="role">[你的岗位 / 定位]</p>
+        <h1>你的名字</h1>
+        <p class="role">全栈开发 / AI 应用构建</p>
 
-        <button class="btn-outline" id="toggle-details" aria-expanded="true" aria-controls="sidebar-details">
-          展开 / 收起信息
-        </button>
+        <ul class="contact-list">
+          <li><span>邮箱</span><a href="mailto:you@example.com">you@example.com</a></li>
+          <li><span>电话</span><a href="tel:+8613800000000">+86 138 0000 0000</a></li>
+          <li><span>城市</span><strong>中国 · 上海</strong></li>
+        </ul>
 
-        <div id="sidebar-details">
-          <ul class="contact-list" aria-label="联系方式">
-            <li><span>邮箱</span><a href="mailto:[你的邮箱]">[你的邮箱]</a></li>
-            <li><span>电话</span><a href="tel:[你的电话]">[你的电话]</a></li>
-            <li><span>城市</span><strong>[你的城市]</strong></li>
-            <li><span>状态</span><strong class="status">[可接项目/在职/求职中]</strong></li>
-          </ul>
-
-          <div class="socials" aria-label="社交链接">
-            <a href="[GitHub链接]" aria-label="GitHub">GitHub</a>
-            <a href="[LinkedIn链接]" aria-label="LinkedIn">LinkedIn</a>
-            <a href="[其他链接]" aria-label="Website">Website</a>
-          </div>
+        <div class="socials">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
         </div>
       </aside>
 
       <section class="content card">
         <header class="topbar">
-          <h2>Portfolio</h2>
-          <nav class="tabs" role="tablist" aria-label="页面导航">
-            <button class="tab active" id="tab-about" data-tab="about" role="tab" aria-selected="true" aria-controls="about">About</button>
-            <button class="tab" id="tab-resume" data-tab="resume" role="tab" aria-selected="false" aria-controls="resume">Resume</button>
-            <button class="tab" id="tab-portfolio" data-tab="portfolio" role="tab" aria-selected="false" aria-controls="portfolio">Portfolio</button>
-            <button class="tab" id="tab-blog" data-tab="blog" role="tab" aria-selected="false" aria-controls="blog">Blog</button>
-            <button class="tab" id="tab-contact" data-tab="contact" role="tab" aria-selected="false" aria-controls="contact">Contact</button>
+          <h2>个人主页</h2>
+          <nav class="tabs" aria-label="页面导航">
+            <button class="tab active" data-tab="about">关于我</button>
+            <button class="tab" data-tab="resume">简历</button>
+            <button class="tab" data-tab="portfolio">作品集</button>
+            <button class="tab" data-tab="contact">联系我</button>
           </nav>
         </header>
 
-        <article class="panel active" id="about" role="tabpanel" aria-labelledby="tab-about">
-          <h3>About Me</h3>
-          <p class="lead">[这里写你的 2~3 句个人简介，说明你是谁、做什么、擅长什么。]</p>
-
-          <h4 class="section-title">Services</h4>
+        <article class="panel active" id="about">
+          <h3>你好，我是你的名字</h3>
+          <p>
+            这是一个基于
+            <a href="https://github.com/codewithsadee/vcard-personal-portfolio" target="_blank" rel="noreferrer">vCard 风格</a>
+            的个人主页版本。整体采用深色背景、金色强调色和卡片化布局，便于你后续扩展为完整作品站。
+          </p>
           <div class="grid two">
-            <article class="mini-card"><h5>[服务 1]</h5><p>[服务描述]</p></article>
-            <article class="mini-card"><h5>[服务 2]</h5><p>[服务描述]</p></article>
-            <article class="mini-card"><h5>[服务 3]</h5><p>[服务描述]</p></article>
-            <article class="mini-card"><h5>[服务 4]</h5><p>[服务描述]</p></article>
+            <div class="mini-card">
+              <h4>我能做什么</h4>
+              <p>Web 全栈开发、自动化工具、AI 集成和产品原型快速实现。</p>
+            </div>
+            <div class="mini-card">
+              <h4>当前目标</h4>
+              <p>将个人品牌、项目展示和联系方式统一在一个简洁高质感主页中。</p>
+            </div>
           </div>
         </article>
 
-        <article class="panel" id="resume" role="tabpanel" aria-labelledby="tab-resume">
-          <h3>Resume</h3>
-          <h4 class="section-title">Experience</h4>
+        <article class="panel" id="resume">
+          <h3>简历时间线</h3>
           <ul class="timeline">
             <li>
               <div class="dot"></div>
               <div>
-                <h5>[公司 / 角色]</h5>
-                <p class="meta">[时间范围]</p>
-                <p>[工作内容与成绩]</p>
+                <h4>高级开发工程师</h4>
+                <p class="meta">2024 - 至今</p>
+                <p>负责 AI 应用平台架构与业务系统迭代。</p>
               </div>
             </li>
             <li>
               <div class="dot"></div>
               <div>
-                <h5>[公司 / 角色]</h5>
-                <p class="meta">[时间范围]</p>
-                <p>[工作内容与成绩]</p>
+                <h4>全栈工程师</h4>
+                <p class="meta">2021 - 2024</p>
+                <p>交付多个中后台系统和内容型网站，持续优化体验与性能。</p>
               </div>
             </li>
           </ul>
-
-          <h4 class="section-title">Skills</h4>
-          <div class="skills">
-            <div class="skill"><span>[技能 1]</span><div class="meter"><i style="width: 90%"></i></div></div>
-            <div class="skill"><span>[技能 2]</span><div class="meter"><i style="width: 80%"></i></div></div>
-            <div class="skill"><span>[技能 3]</span><div class="meter"><i style="width: 85%"></i></div></div>
-          </div>
         </article>
 
-        <article class="panel" id="portfolio" role="tabpanel" aria-labelledby="tab-portfolio">
-          <h3>Portfolio</h3>
-          <div class="filters" role="toolbar" aria-label="作品筛选">
-            <button class="filter active" data-filter="all">All</button>
-            <button class="filter" data-filter="web">Web</button>
-            <button class="filter" data-filter="app">App</button>
-            <button class="filter" data-filter="design">Design</button>
-          </div>
-
+        <article class="panel" id="portfolio">
+          <h3>精选项目</h3>
           <div class="grid projects">
-            <a class="project" data-kind="web" href="[项目1链接]"><span class="tag">Web</span><h5>[项目 1]</h5><p>[项目描述]</p></a>
-            <a class="project" data-kind="app" href="[项目2链接]"><span class="tag">App</span><h5>[项目 2]</h5><p>[项目描述]</p></a>
-            <a class="project" data-kind="design" href="[项目3链接]"><span class="tag">Design</span><h5>[项目 3]</h5><p>[项目描述]</p></a>
-            <a class="project" data-kind="web" href="[项目4链接]"><span class="tag">Web</span><h5>[项目 4]</h5><p>[项目描述]</p></a>
-          </div>
-        </article>
-
-        <article class="panel" id="blog" role="tabpanel" aria-labelledby="tab-blog">
-          <h3>Blog</h3>
-          <div class="grid blog-list">
-            <a class="mini-card blog-item" href="[文章1链接]">
-              <p class="meta">[日期] · [分类]</p>
-              <h5>[文章标题 1]</h5>
-              <p>[文章摘要]</p>
+            <a class="project" href="#">
+              <h4>AI 内容工作台</h4>
+              <p>Prompt 模板、工作流和知识库整合。</p>
             </a>
-            <a class="mini-card blog-item" href="[文章2链接]">
-              <p class="meta">[日期] · [分类]</p>
-              <h5>[文章标题 2]</h5>
-              <p>[文章摘要]</p>
+            <a class="project" href="#">
+              <h4>个人品牌站</h4>
+              <p>主页 + 博客 + 项目展示的一体化方案。</p>
+            </a>
+            <a class="project" href="#">
+              <h4>自动化运营看板</h4>
+              <p>数据聚合、监控告警和日报自动发送。</p>
             </a>
           </div>
         </article>
 
-        <article class="panel" id="contact" role="tabpanel" aria-labelledby="tab-contact">
-          <h3>Contact</h3>
-          <p class="lead">[这里写联系说明，例如：欢迎合作、通常回复时长等。]</p>
-          <p class="meta">此联系表单当前为模板占位内容；在配置真实提交接口前，提交操作将不会发送任何消息。</p>
-          <form class="contact-form" onsubmit="event.preventDefault();" aria-describedby="contact-form-note">
-            <label>姓名<input type="text" name="name" placeholder="请输入姓名" required /></label>
-            <label>邮箱<input type="email" name="email" placeholder="请输入邮箱" required /></label>
-            <label>主题<input type="text" name="subject" placeholder="请输入主题" /></label>
-            <label>留言<textarea name="message" rows="5" placeholder="请输入留言" required></textarea></label>
+        <article class="panel" id="contact">
+          <h3>联系我</h3>
+          <form class="contact-form" action="#" method="post">
+            <label>
+              姓名
+              <input type="text" name="name" placeholder="请输入你的姓名" />
+            </label>
+            <label>
+              邮箱
+              <input type="email" name="email" placeholder="请输入你的邮箱" />
+            </label>
+            <label>
+              留言
+              <textarea name="message" rows="5" placeholder="请输入留言内容"></textarea>
+            </label>
             <button type="submit">发送消息</button>
-            <p class="meta" id="contact-form-note">请先将此表单连接到真实的后端、表单服务或邮件处理端点，再启用提交。</p>
           </form>
         </article>
-
-        <footer class="footer">
-          <small>© <span id="year"></span> [你的姓名] · All rights reserved.</small>
-        </footer>
       </section>
     </main>
 
