@@ -1,0 +1,272 @@
+:root {
+  --bg: #121212;
+  --bg-soft: #1e1e1f;
+  --surface: #222325;
+  --text: #fafafa;
+  --muted: #b4b4b6;
+  --line: #3a3b3c;
+  --gold: #d4a24f;
+  --gold-soft: #f0c77c;
+  --radius: 18px;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 15% 15%, #242426 0%, var(--bg) 45%);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+.page {
+  width: min(1200px, 94vw);
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 1.2rem;
+}
+
+.card {
+  background: linear-gradient(180deg, var(--bg-soft), #1a1a1b);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.sidebar {
+  padding: 1.4rem;
+  position: sticky;
+  top: 1rem;
+  height: fit-content;
+}
+
+.avatar {
+  width: 74px;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: #1b1b1d;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.35rem;
+}
+
+.role {
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+.contact-list {
+  margin: 1.2rem 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.contact-list li {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.92rem;
+}
+
+.contact-list span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.socials {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.82rem;
+  color: var(--gold-soft);
+}
+
+.content {
+  padding: 1.2rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tab {
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #161616;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+}
+
+.panel {
+  display: none;
+  animation: fade 0.2s ease;
+}
+
+.panel.active {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.mini-card,
+.project {
+  border: 1px solid var(--line);
+  background: #242526;
+  border-radius: 14px;
+  padding: 0.95rem;
+}
+
+.project {
+  text-decoration: none;
+}
+
+.timeline {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 0.8rem;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  margin-top: 0.35rem;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(212, 162, 79, 0.2);
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contact-form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  background: #171718;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+}
+
+button[type="submit"] {
+  justify-self: start;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  color: #171717;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+}
