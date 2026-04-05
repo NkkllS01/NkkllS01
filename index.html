@@ -43,16 +43,16 @@
       <section class="content card">
         <header class="topbar">
           <h2>Portfolio</h2>
-          <nav class="tabs" aria-label="页面导航">
-            <button class="tab active" data-tab="about" role="tab" aria-selected="true">About</button>
-            <button class="tab" data-tab="resume" role="tab" aria-selected="false">Resume</button>
-            <button class="tab" data-tab="portfolio" role="tab" aria-selected="false">Portfolio</button>
-            <button class="tab" data-tab="blog" role="tab" aria-selected="false">Blog</button>
-            <button class="tab" data-tab="contact" role="tab" aria-selected="false">Contact</button>
+          <nav class="tabs" role="tablist" aria-label="页面导航">
+            <button class="tab active" id="tab-about" data-tab="about" role="tab" aria-selected="true" aria-controls="about">About</button>
+            <button class="tab" id="tab-resume" data-tab="resume" role="tab" aria-selected="false" aria-controls="resume">Resume</button>
+            <button class="tab" id="tab-portfolio" data-tab="portfolio" role="tab" aria-selected="false" aria-controls="portfolio">Portfolio</button>
+            <button class="tab" id="tab-blog" data-tab="blog" role="tab" aria-selected="false" aria-controls="blog">Blog</button>
+            <button class="tab" id="tab-contact" data-tab="contact" role="tab" aria-selected="false" aria-controls="contact">Contact</button>
           </nav>
         </header>
 
-        <article class="panel active" id="about" role="tabpanel">
+        <article class="panel active" id="about" role="tabpanel" aria-labelledby="tab-about">
           <h3>About Me</h3>
           <p class="lead">[这里写你的 2~3 句个人简介，说明你是谁、做什么、擅长什么。]</p>
 
@@ -65,7 +65,7 @@
           </div>
         </article>
 
-        <article class="panel" id="resume" role="tabpanel">
+        <article class="panel" id="resume" role="tabpanel" aria-labelledby="tab-resume">
           <h3>Resume</h3>
           <h4 class="section-title">Experience</h4>
           <ul class="timeline">
@@ -95,7 +95,7 @@
           </div>
         </article>
 
-        <article class="panel" id="portfolio" role="tabpanel">
+        <article class="panel" id="portfolio" role="tabpanel" aria-labelledby="tab-portfolio">
           <h3>Portfolio</h3>
           <div class="filters" role="toolbar" aria-label="作品筛选">
             <button class="filter active" data-filter="all">All</button>
@@ -112,7 +112,7 @@
           </div>
         </article>
 
-        <article class="panel" id="blog" role="tabpanel">
+        <article class="panel" id="blog" role="tabpanel" aria-labelledby="tab-blog">
           <h3>Blog</h3>
           <div class="grid blog-list">
             <a class="mini-card blog-item" href="[文章1链接]">
@@ -128,15 +128,17 @@
           </div>
         </article>
 
-        <article class="panel" id="contact" role="tabpanel">
+        <article class="panel" id="contact" role="tabpanel" aria-labelledby="tab-contact">
           <h3>Contact</h3>
           <p class="lead">[这里写联系说明，例如：欢迎合作、通常回复时长等。]</p>
-          <form class="contact-form" action="#" method="post">
+          <p class="meta">此联系表单当前为模板占位内容；在配置真实提交接口前，提交操作将不会发送任何消息。</p>
+          <form class="contact-form" onsubmit="event.preventDefault();" aria-describedby="contact-form-note">
             <label>姓名<input type="text" name="name" placeholder="请输入姓名" required /></label>
             <label>邮箱<input type="email" name="email" placeholder="请输入邮箱" required /></label>
             <label>主题<input type="text" name="subject" placeholder="请输入主题" /></label>
             <label>留言<textarea name="message" rows="5" placeholder="请输入留言" required></textarea></label>
             <button type="submit">发送消息</button>
+            <p class="meta" id="contact-form-note">请先将此表单连接到真实的后端、表单服务或邮件处理端点，再启用提交。</p>
           </form>
         </article>
 
