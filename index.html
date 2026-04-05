@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[你的姓名] | Personal Portfolio</title>
+    <meta name="description" content="[你的姓名] 的个人主页与作品集。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main class="page" aria-label="个人主页主体">
+      <aside class="sidebar card">
+        <div class="avatar" aria-hidden="true">YK</div>
+        <h1>[你的姓名]</h1>
+        <p class="role">[你的岗位 / 定位]</p>
+
+        <button class="btn-outline" id="toggle-details" aria-expanded="true" aria-controls="sidebar-details">
+          展开 / 收起信息
+        </button>
+
+        <div id="sidebar-details">
+          <ul class="contact-list" aria-label="联系方式">
+            <li><span>邮箱</span><a href="mailto:[你的邮箱]">[你的邮箱]</a></li>
+            <li><span>电话</span><a href="tel:[你的电话]">[你的电话]</a></li>
+            <li><span>城市</span><strong>[你的城市]</strong></li>
+            <li><span>状态</span><strong class="status">[可接项目/在职/求职中]</strong></li>
+          </ul>
+
+          <div class="socials" aria-label="社交链接">
+            <a href="[GitHub链接]" aria-label="GitHub">GitHub</a>
+            <a href="[LinkedIn链接]" aria-label="LinkedIn">LinkedIn</a>
+            <a href="[其他链接]" aria-label="Website">Website</a>
+          </div>
+        </div>
+      </aside>
+
+      <section class="content card">
+        <header class="topbar">
+          <h2>Portfolio</h2>
+          <nav class="tabs" aria-label="页面导航">
+            <button class="tab active" data-tab="about" role="tab" aria-selected="true">About</button>
+            <button class="tab" data-tab="resume" role="tab" aria-selected="false">Resume</button>
+            <button class="tab" data-tab="portfolio" role="tab" aria-selected="false">Portfolio</button>
+            <button class="tab" data-tab="blog" role="tab" aria-selected="false">Blog</button>
+            <button class="tab" data-tab="contact" role="tab" aria-selected="false">Contact</button>
+          </nav>
+        </header>
+
+        <article class="panel active" id="about" role="tabpanel">
+          <h3>About Me</h3>
+          <p class="lead">[这里写你的 2~3 句个人简介，说明你是谁、做什么、擅长什么。]</p>
+
+          <h4 class="section-title">Services</h4>
+          <div class="grid two">
+            <article class="mini-card"><h5>[服务 1]</h5><p>[服务描述]</p></article>
+            <article class="mini-card"><h5>[服务 2]</h5><p>[服务描述]</p></article>
+            <article class="mini-card"><h5>[服务 3]</h5><p>[服务描述]</p></article>
+            <article class="mini-card"><h5>[服务 4]</h5><p>[服务描述]</p></article>
+          </div>
+        </article>
+
+        <article class="panel" id="resume" role="tabpanel">
+          <h3>Resume</h3>
+          <h4 class="section-title">Experience</h4>
+          <ul class="timeline">
+            <li>
+              <div class="dot"></div>
+              <div>
+                <h5>[公司 / 角色]</h5>
+                <p class="meta">[时间范围]</p>
+                <p>[工作内容与成绩]</p>
+              </div>
+            </li>
+            <li>
+              <div class="dot"></div>
+              <div>
+                <h5>[公司 / 角色]</h5>
+                <p class="meta">[时间范围]</p>
+                <p>[工作内容与成绩]</p>
+              </div>
+            </li>
+          </ul>
+
+          <h4 class="section-title">Skills</h4>
+          <div class="skills">
+            <div class="skill"><span>[技能 1]</span><div class="meter"><i style="width: 90%"></i></div></div>
+            <div class="skill"><span>[技能 2]</span><div class="meter"><i style="width: 80%"></i></div></div>
+            <div class="skill"><span>[技能 3]</span><div class="meter"><i style="width: 85%"></i></div></div>
+          </div>
+        </article>
+
+        <article class="panel" id="portfolio" role="tabpanel">
+          <h3>Portfolio</h3>
+          <div class="filters" role="toolbar" aria-label="作品筛选">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="web">Web</button>
+            <button class="filter" data-filter="app">App</button>
+            <button class="filter" data-filter="design">Design</button>
+          </div>
+
+          <div class="grid projects">
+            <a class="project" data-kind="web" href="[项目1链接]"><span class="tag">Web</span><h5>[项目 1]</h5><p>[项目描述]</p></a>
+            <a class="project" data-kind="app" href="[项目2链接]"><span class="tag">App</span><h5>[项目 2]</h5><p>[项目描述]</p></a>
+            <a class="project" data-kind="design" href="[项目3链接]"><span class="tag">Design</span><h5>[项目 3]</h5><p>[项目描述]</p></a>
+            <a class="project" data-kind="web" href="[项目4链接]"><span class="tag">Web</span><h5>[项目 4]</h5><p>[项目描述]</p></a>
+          </div>
+        </article>
+
+        <article class="panel" id="blog" role="tabpanel">
+          <h3>Blog</h3>
+          <div class="grid blog-list">
+            <a class="mini-card blog-item" href="[文章1链接]">
+              <p class="meta">[日期] · [分类]</p>
+              <h5>[文章标题 1]</h5>
+              <p>[文章摘要]</p>
+            </a>
+            <a class="mini-card blog-item" href="[文章2链接]">
+              <p class="meta">[日期] · [分类]</p>
+              <h5>[文章标题 2]</h5>
+              <p>[文章摘要]</p>
+            </a>
+          </div>
+        </article>
+
+        <article class="panel" id="contact" role="tabpanel">
+          <h3>Contact</h3>
+          <p class="lead">[这里写联系说明，例如：欢迎合作、通常回复时长等。]</p>
+          <form class="contact-form" action="#" method="post">
+            <label>姓名<input type="text" name="name" placeholder="请输入姓名" required /></label>
+            <label>邮箱<input type="email" name="email" placeholder="请输入邮箱" required /></label>
+            <label>主题<input type="text" name="subject" placeholder="请输入主题" /></label>
+            <label>留言<textarea name="message" rows="5" placeholder="请输入留言" required></textarea></label>
+            <button type="submit">发送消息</button>
+          </form>
+        </article>
+
+        <footer class="footer">
+          <small>© <span id="year"></span> [你的姓名] · All rights reserved.</small>
+        </footer>
+      </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
