@@ -28,7 +28,7 @@ git push
 - `layouts/`：模板
 - `themes/`：主题
 - `static/`：静态资源（图片、下载文件等）
-- `config.toml|yaml|json`：站点配置
+- `config.toml` / `config.yaml` / `config.json`：站点配置
 
 典型流程：
 
