@@ -78,6 +78,8 @@ git remote -v
 
 看 remote URL 就能确认当前仓库到底对应哪个 GitHub 仓库。
 
-如果你愿意，我下一步可以直接给你一份：
-- “改一个新页面（About/Projects）”的 Hugo 最短操作清单；
-- 或者按你现在主题结构，告诉你**具体改哪个文件**。
+## 常见后续操作
+
+- **新增页面（About / Projects 等）**：优先检查 `content/` 下是否已有对应 section，并同步确认 `config.toml|yaml|json` 中的菜单配置，以及主题是否为该页面提供了模板。
+- **定位应修改的文件**：通常先看 `content/`（内容），再看 `layouts/`（模板覆盖）、`themes/`（主题实现）、`static/`（静态资源）和 `config.toml|yaml|json`（站点配置）。
+- **修改前建议**：先在本地执行 `hugo server -D` 预览，确认页面路径、菜单入口和样式均符合预期后再提交。
